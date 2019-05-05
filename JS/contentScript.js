@@ -2,9 +2,9 @@ console.log("hello");
 
 
 
-var response = "";
+let response = "";
 
-var topics = ["c-sharp", "c sharp", "c#", "c++",
+let topics = ["c-sharp", "c sharp", "c#", "c++",
     "java", "spring", "restful", "http", "machine learning", "assembly", "ruby", "javascript",
     "php", "ror", "rails", "a#", ".net", "a++", "abap", "abc", "absys", "acc", ".net",
     "acl2", "dsl", "action script", "ada", "adenine", "agda",
@@ -14,7 +14,8 @@ var topics = ["c-sharp", "c sharp", "c#", "c++",
     "A+", "A++", "ABAP", "ABC", "ABC ALGOL", "ABSET", "ABSYS", "ACC", "Accent",
     "Ace DASL", "ACL2", "ACT-III", "Action!", "ActionScript", "Actor",
     "Ada", "Adenine", "Agda", "Agilent VEE", "Agora", "AIMMS", "Aldor", "Alef", "ALF", "ALGOL 58", "ALGOL 60",
-    "ALGOL 68", "ALGOL W", "Alice", "Alma-0", "AmbientTalk", "Amiga E", "AMOS", "AMPL", "AngelScript", "Angular", "Apex", "APL", "AppleScript", "APT", "Arc", "ARexx", "Argus", "AspectJ",
+    "ALGOL 68", "ALGOL W", "Alice", "Alma-0", "AmbientTalk", "Amiga E", "AMOS", "AMPL", "AngelScript", "Angular", "Apex",
+    "APL", "AppleScript", "APT", "Arc", "ARexx", "Argus", "AspectJ",
     "Assembly", "ATS", "Ateji PX", "AutoHotkey", "Autocoder", "AutoIt", "AutoLISP / Visual LISP", "Averest",
     "AWK", "Axum", "Active Server Pages", "B", "Babbage", "Ballerina", "Bash", "BASIC", "bc", "BCPL", "BeanShell",
     "Batch file (Windows/MSDOS)", "Bertrand", "BETA", "BLISS", "Blockly", "BlooP", "Boo", "Boomerang", "Bourne shell",
@@ -36,14 +37,54 @@ var topics = ["c-sharp", "c sharp", "c#", "c++",
     "FoxPro", "FP", "Franz Lisp", "F-Script", "G", "GameMonkey Script", "GAMS", "GAP", "G-code",
     "GDScript", "Genie", "GDL", "GJ", "GEORGE", "GLSL", "GNU E", "GM", "Go", "Go!", "GOAL", "Gödel", "Golo",
     "GOM (Good Old Mad)", "Google Apps Script", "Gosu", "GOTRAN", "GPSS", "GraphTalk", "GRASS", "Grasshopper", "Groovy",
-    "Hack", "HAGGIS", "HAL/S", "Halide", "Hamilton C shell", "Harbour", "Hartmann pipelines", "Haskell", "Haxe", "Hermes", "High Level Assembly", "HLSL", "HolyC", "Hop", "Hopscotch", "Hope", "Hugo", "Hume", "HyperTalk", "Hexa", "HTML", "Io", "Icon", "IBM BASICA", "IBM HAScript", "IBM Informix-4GL", "IBM RPG", "Irineu", "IDL", "Idris", "Inform", "J", "J#", "J++", "JADE", "JAL", "Janus", "JASS", "Java", "JavaFX Script", "JavaScript", "JCL", "JEAN", "Join Java", "JOSS", "Joule", "JOVIAL", "Joy", "JScript", "JScript .NET", "JSON", "Julia", "Jython", "K", "Kaleidoscope", "Karel", "Karel++", "KEE", "Kixtart", "Klerer-May System", "KIF", "Kojo", "Kotlin", "KRC", "KRL", "KRYPTON", "Korn shell (ksh)", "Kodu", "Kv", "LabVIEW", "Ladder", "LANSA", "Lasso", "LaTeX", "Lava", "LC-3", "Leda", "Legoscript", "LIL", "LilyPond", "Limbo", "Limnor", "LINC", "Lingo", "LINQ", "LIS", "LISA", "Lisp", "Lite-C", "Lithe", "Little b", "LLL", "Logo", "Logtalk", "LotusScript", "LPC", "LSE", "LSL", "LiveCode", "LiveScript", "Lua", "Lucid", "Lustre", "LYaPAS", "Lynx", "M", "M2001", "M4", "M#", "MAD", "MAD/I", "Magik", "Magma", "make", "Maude", "Maple", "MAPPER", "MARK-IV", "Mary", "MASM Microsoft Assembly x86", "MATH-MATIC", "Mathematica", "MATLAB", "Maxima", "Macsyma", "Max", "MaxScript", "Maya (MEL)", "MDL", "Mercury", "Mesa", "Metafont", "MetaQuotes(MQL4/MQL5)", "MHEG-5", "Microcode", "MicroScript", "MIIS", "Milk", "MIMIC", "Mirah", "Miranda", "MIVA Script", "ML", "Model 204", "Modelica", "Modula", "Modula-2", "Modula-3", "Mohol", "MOO", "Mortran", "Mouse", "MPD", "Mathcad", "CIL", "MSL", "MUMPS", "MuPAD", "Mutan", "NASM", "Napier88", "Neko", "Nemerle", "NESL", "Net.Data", "NetLogo", "NetRexx", "NewLISP", "NEWP", "Newspeak", "NewtonScript", "Nial", "Nice", "Nickle", "NITIN", "Nim", "NPL", "Not eXactly C", "Not Quite C", "NSIS", "Nu", "NWScript", "NXT-G", "o:XML", "Oak", "Oberon", "OBJ2", "Object Lisp", "ObjectLOGO", "Object REXX", "Object Pascal", "Objective-C", "Objective-J", "Obliq", "OCaml", "occam", "occam-π", "Octave", "OmniMark", "Onyx", "Opa", "Opal", "OpenCL", "OpenEdge ABL", "OPL", "OpenVera", "OPS5", "OptimJ", "Orc", "ORCA/Modula-2", "Oriel", "Orwell", "Oxygene", "Oz", "P", "P4", "P′′", "ParaSail", "PARI/GP", "Pascal", "PCASTL", "PCF", "PEARL", "PeopleCode", "Perl", "PDL", "Perl 6", "Pharo", "PHP", "Pico", "Picolisp", "Pict", "Pig", "Pike", "PIKT", "PILOT", "Pipelines", "Pizza", "PL-11", "PL/0", "PL/B", "PL/C", "PL/I", "PL/M", "PL/P", "PL/SQL", "PL360", "PLANC", "Plankalkül", "Planner", "PLEX", "PLEXIL", "Plus", "POP-11", "POP-2", "PostScript", "PortablE", "POV-Ray SDL", "Powerhouse", "PowerBuilder", "PowerShell", "PPL", "Processing", "Processing.js", "Prograph", "PROIV", "Prolog", "PROMAL", "Promela", "PROSE ", "PROTEL", "ProvideX", "Pro*C", "Pure", "PureBasic", "Python", "Q", "Q ", "Q#", "Qalb", "QtScript", "QuakeC", "QPL", "R", "R++", "Racket", "RAPID", "Rapira", "Ratfiv", "Ratfor", "React", "rc", "REBOL", "Red", "Redcode", "REFAL", "Reia", "REXX", "Ring", "Rlab", "ROOP", "RPG", "RPL", "RSL", "RTL/2", "Ruby", "RuneScript", "Rust", "S", "S2", "S3", "S-Lang", "S-PLUS", "SA-C", "SabreTalk", "SAIL", "SALSA", "SAM76", "SAS", "SASL", "Sather", "Sawzall", "Scala", "Scheme", "Scilab", "Scratch", "Script.NET", "Sed", "Seed7", "Self", "SenseTalk", "SequenceL", "Serpent", "SETL", "SIMPOL", "SIGNAL", "SiMPLE", "SIMSCRIPT", "Simula", "Simulink", "Singularity", "SISAL", "SLIP", "SMALL", "Smalltalk", "SML", "Strongtalk", "Snap!", "SNOBOL", "SPITBOL", "Snowball", "SOL", "Solidity", "SOPHAEROS", "SPARK", "Speedcode", "SPIN", "SP/k", "SPS", "SQL", "SQR", "Squeak", "Squirrel", "SR", "S/SL", "Starlogo", "Strand", "Stata", "Stateflow", "Subtext", "SBL", "SuperCollider", "SuperTalk", "Swift", "Swift", "SYMPL", "SystemVerilog", "T", "TACL", "TACPOL", "TADS", "TAL", "Tcl", "Tea", "TECO", "TELCOMP", "TeX", "TEX", "TIE", "TMG", "Tom", "TOM", "Toi", "Topspeed", "TPU", "Trac", "TTM", "T-SQL", "Transcript", "TTCN", "Turing", "TUTOR", "TXL", "TypeScript", "Tynker", "Ubercode", "UCSD Pascal", "Umple", "Unicon", "Uniface", "UNITY", "Unix shell", "UnrealScript", "Vala", "Verilog", "VHDL", "Vim script", "Viper", "Visual Basic", "Visual Basic .NET", "Visual DataFlex", "Visual DialogScript", "Visual Fortran", "Visual FoxPro", "Visual J++", "Visual J#", "Visual LISP", "Visual Objects", "Visual Prolog", "VSXu", "V++", "WATFIV, WATFOR", "WebAssembly", "WebDNA", "Whiley", "Winbatch", "Wolfram", "Wyvern", "X++", "X10", "xBase", "xBase++", "XBL", "XC", "XMOS architecture", "xHarbour", "XL", "Xojo", "XOTcl", "XOD", "XPath", "XPL", "XPL0", "XQuery", "XSB", "XSharp", "XSLT", "Xtend", "Yorick", "YQL", "Yoix", "Z", "Zebra, ZPL, ZPL2", "Zeno", "ZetaLisp", "ZFRAME", "ZOPL", "Zsh", "ZPL", "Z++"]
+    "Hack", "HAGGIS", "HAL/S", "Halide", "Hamilton C shell", "Harbour", "Hartmann pipelines", "Haskell", "Haxe", "Hermes",
+    "High Level Assembly", "HLSL", "HolyC", "Hop", "Hopscotch", "Hope", "Hugo", "Hume", "HyperTalk", "Hexa", "HTML", "Io",
+    "Icon", "IBM BASICA", "IBM HAScript", "IBM Informix-4GL", "IBM RPG", "Irineu", "IDL", "Idris", "Inform", "J", "J#",
+    "J++", "JADE", "JAL", "Janus", "JASS", "Java", "JavaFX Script", "JavaScript", "JCL", "JEAN", "Join Java", "JOSS",
+    "Joule", "JOVIAL", "Joy", "JScript", "JScript .NET", "JSON", "Julia", "Jython", "K", "Kaleidoscope", "Karel", "Karel++",
+    "KEE", "Kixtart", "Klerer-May System", "KIF", "Kojo", "Kotlin", "KRC", "KRL", "KRYPTON", "Korn shell (ksh)", "Kodu",
+    "Kv", "LabVIEW", "Ladder", "LANSA", "Lasso", "LaTeX", "Lava", "LC-3", "Leda", "Legoscript", "LIL", "LilyPond", "Limbo",
+    "Limnor", "LINC", "Lingo", "LINQ", "LIS", "LISA", "Lisp", "Lite-C", "Lithe", "Little b", "LLL", "Logo", "Logtalk",
+    "LotusScript", "LPC", "LSE", "LSL", "LiveCode", "LiveScript", "Lua", "Lucid", "Lustre", "LYaPAS", "Lynx", "M", "M2001",
+    "M4", "M#", "MAD", "MAD/I", "Magik", "Magma", "make", "Maude", "Maple", "MAPPER", "MARK-IV", "Mary",
+    "MASM Microsoft Assembly x86", "MATH-MATIC", "Mathematica", "MATLAB", "Maxima", "Macsyma", "Max", "MaxScript",
+    "Maya (MEL)", "MDL", "Mercury", "Mesa", "Metafont", "MetaQuotes(MQL4/MQL5)", "MHEG-5", "Microcode", "MicroScript",
+    "MIIS", "Milk", "MIMIC", "Mirah", "Miranda", "MIVA Script", "ML", "Model 204", "Modelica", "Modula", "Modula-2",
+    "Modula-3", "Mohol", "MOO", "Mortran", "Mouse", "MPD", "Mathcad", "CIL", "MSL", "MUMPS", "MuPAD", "Mutan", "NASM",
+    "Napier88", "Neko", "Nemerle", "NESL", "Net.Data", "NetLogo", "NetRexx", "NewLISP", "NEWP", "Newspeak", "NewtonScript",
+    "Nial", "Nice", "Nickle", "NITIN", "Nim", "NPL", "Not eXactly C", "Not Quite C", "NSIS", "Nu", "NWScript", "NXT-G",
+    "o:XML", "Oak", "Oberon", "OBJ2", "Object Lisp", "ObjectLOGO", "Object REXX", "Object Pascal", "Objective-C",
+    "Objective-J", "Obliq", "OCaml", "occam", "occam-π", "Octave", "OmniMark", "Onyx", "Opa", "Opal", "OpenCL",
+    "OpenEdge ABL", "OPL", "OpenVera", "OPS5", "OptimJ", "Orc", "ORCA/Modula-2", "Oriel", "Orwell", "Oxygene", "Oz", "P",
+    "P4", "P′′", "ParaSail", "PARI/GP", "Pascal", "PCASTL", "PCF", "PEARL", "PeopleCode", "Perl", "PDL", "Perl 6", "Pharo",
+    "PHP", "Pico", "Picolisp", "Pict", "Pig", "Pike", "PIKT", "PILOT", "Pipelines", "Pizza", "PL-11", "PL/0", "PL/B", "PL/C",
+    "PL/I", "PL/M", "PL/P", "PL/SQL", "PL360", "PLANC", "Plankalkül", "Planner", "PLEX", "PLEXIL", "Plus", "POP-11", "POP-2",
+    "PostScript", "PortablE", "POV-Ray SDL", "Powerhouse", "PowerBuilder", "PowerShell", "PPL", "Processing", "Processing.js",
+    "Prograph", "PROIV", "Prolog", "PROMAL", "Promela", "PROSE ", "PROTEL", "ProvideX", "Pro*C", "Pure", "PureBasic", "Python",
+    "Q", "Q ", "Q#", "Qalb", "QtScript", "QuakeC", "QPL", "R", "R++", "Racket", "RAPID", "Rapira", "Ratfiv", "Ratfor", "React",
+    "rc", "REBOL", "Red", "Redcode", "REFAL", "Reia", "REXX", "Ring", "Rlab", "ROOP", "RPG", "RPL", "RSL", "RTL/2", "Ruby",
+    "RuneScript", "Rust", "S", "S2", "S3", "S-Lang", "S-PLUS", "SA-C", "SabreTalk", "SAIL", "SALSA", "SAM76", "SAS", "SASL",
+    "Sather", "Sawzall", "Scala", "Scheme", "Scilab", "Scratch", "Script.NET", "Sed", "Seed7", "Self", "SenseTalk", "SequenceL",
+    "Serpent", "SETL", "SIMPOL", "SIGNAL", "SiMPLE", "SIMSCRIPT", "Simula", "Simulink", "Singularity", "SISAL", "SLIP", "SMALL",
+    "Smalltalk", "SML", "Strongtalk", "Snap!", "SNOBOL", "SPITBOL", "Snowball", "SOL", "Solidity", "SOPHAEROS", "SPARK",
+    "Speedcode", "SPIN", "SP/k", "SPS", "SQL", "SQR", "Squeak", "Squirrel", "SR", "S/SL", "Starlogo", "Strand", "Stata",
+    "Stateflow", "Subtext", "SBL", "SuperCollider", "SuperTalk", "Swift", "Swift", "SYMPL", "SystemVerilog", "T", "TACL",
+    "TACPOL", "TADS", "TAL", "Tcl", "Tea", "TECO", "TELCOMP", "TeX", "TEX", "TIE", "TMG", "Tom", "TOM", "Toi", "Topspeed",
+    "TPU", "Trac", "TTM", "T-SQL", "Transcript", "TTCN", "Turing", "TUTOR", "TXL", "TypeScript", "Tynker", "Ubercode",
+    "UCSD Pascal", "Umple", "Unicon", "Uniface", "UNITY", "Unix shell", "UnrealScript", "Vala", "Verilog", "VHDL",
+    "Vim script", "Viper", "Visual Basic", "Visual Basic .NET", "Visual DataFlex", "Visual DialogScript", "Visual Fortran",
+    "Visual FoxPro", "Visual J++", "Visual J#", "Visual LISP", "Visual Objects", "Visual Prolog", "VSXu", "V++",
+    "WATFIV, WATFOR", "WebAssembly", "WebDNA", "Whiley", "Winbatch", "Wolfram", "Wyvern", "X++", "X10", "xBase", "xBase++",
+    "XBL", "XC", "XMOS architecture", "xHarbour", "XL", "Xojo", "XOTcl", "XOD", "XPath", "XPL", "XPL0", "XQuery", "XSB",
+    "XSharp", "XSLT", "Xtend", "Yorick", "YQL", "Yoix", "Z", "Zebra, ZPL, ZPL2", "Zeno", "ZetaLisp", "ZFRAME", "ZOPL",
+    "Zsh", "ZPL", "Z++"];
 
-var found = [];
+let found = [];
 
 function checkTopics(a) {
-    for (var i = 0; i < topics.length; i++) {
-        var tokens = a.label.split(" ");
-        for (var j = 0; j < tokens.length; j++) {
+    for (let i = 0; i < topics.length; i++) {
+        let tokens = a.label.split(" ");
+        for (let j = 0; j < tokens.length; j++) {
             if (topics[i].toLowerCase().split(" ").includes(tokens[j].toLowerCase())) {
                 if (found.includes(tokens[j].toLowerCase())) continue;
                 found.push(tokens[j].toLowerCase());
@@ -68,8 +109,8 @@ chrome.runtime.onMessage.addListener(
 
 function doIt() {
 
-    var http = new XMLHttpRequest();
-    var endpoint = "https://api.textrazor.com/";
+    let http = new XMLHttpRequest();
+    let endpoint = "https://api.textrazor.com/";
 
     http.open("POST", endpoint, true);
 
@@ -94,12 +135,12 @@ function doIt() {
                 data:[]
             };
 
-            for (var k = 0; k < Math.min(4, topics.length); k++) {
+            for (let k = 0; k < Math.min(4, topics.length); k++) {
 
                 let gh = new XMLHttpRequest();
-                var ghend_repo = "https://api.github.com/search/repositories"
+                let ghend_repo = "https://api.github.com/search/repositories"
 
-                var body = "q=topic:" + topics[k].label.replace(" ", "+") + "&sort=stars&order=desc"
+                let body = "q=topic:" + topics[k].label.replace(" ", "+") + "&sort=stars&order=desc"
                 gh.open("GET", ghend_repo + "?" + body, true);
 
                 gh.setRequestHeader('Accept', 'application/vnd.github.mercy-preview+json');
@@ -113,7 +154,7 @@ function doIt() {
 
                         console.log(gh.response);
 
-                        var repos = gh.response.items
+                        let repos = gh.response.items
 
 
                         toshow.data.push({
@@ -134,7 +175,7 @@ function doIt() {
 
 
         }
-    }
+    };
 
 
     http.send("extractors=topics&url=" + window.location.href);
